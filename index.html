@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="bootstrap files/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/0125fa9422.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather</title>
+  </head>
+  <body class="bg-dark-blue min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-dark-blue sticky-top py-5">
+      <div class="container">
+        <a
+          class="d-flex align-items-center text-decoration-none pointer gap-2"
+          href="#"
+        >
+          <div class="logo-image">
+            <img src="images/logo.png" alt="logo" class="img-fluid" />
+          </div>
+          <div
+            class="d-flex flex-column align-items-start justify-content-center"
+          >
+            <span class="logo-main">Weather</span>
+            <span class="logo-sec">tagline goes here</span>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link m-0" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero">
+      <div class="container position-relative">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Find your location..."
+          id="search"
+        />
+        <button class="btn-search" id="searchBtn">Find</button>
+      </div>
+    </div>
+    <div class="wather-place">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card" id="firstCard">
+              <div
+                class="card-header d-flex justify-content-between align-items-center"
+              >
+                <span id="today">Tuesday</span>
+                <span id="todayDate">18June</span>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title" id="mainCity"></h5>
+                  <div
+                    class="d-flex justify-content-start align-items-center flex-wrap"
+                  >
+                    <p class="card-text" id="nowTemp"></p>
+                    <div class="weather-icon d-flex align-items-center">
+                      <img src="#" alt="Weather Icon" id="fristIcon" />
+                    </div>
+                  </div>
+                </div>
+                <span class="weather-status mt-auto" id="weatherStatus"></span>
+              </div>
+              <div
+                class="card-footer text-muted d-flex justify-content-start align-items-center gap-3"
+              >
+                <div class="d-flex align-items-center gap-1">
+                  <img src="images/icon-umberella.png" alt="rain" />
+                  <span id="humidity"></span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <img src="images/icon-wind.png" alt="wind" />
+                  <span id="windSpeed"></span>
+                </div>
+                <div class="d-flex align-items-center gap-1">
+                  <img
+                    src="images/icon-compass.png"
+                    alt="compass"
+                    id="windDirCompass"
+                  />
+                  <span id="windDir"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card bg-sec-dark" id="secondCard">
+              <div class="card-header text-center bg-dark-three">
+                <span class="card-title" id="fristDay"></span>
+              </div>
+              <div
+                class="card-body bg-sec-dark d-flex flex-column align-items-center"
+              >
+                <div class="weather-icon">
+                  <img
+                    src="images/night.png"
+                    alt=" Weather Icon"
+                    id="secondIcon"
+                  />
+                </div>
+                <div class="wather-dgree d-flex flex-column align-items-center">
+                  <p class="high m-0" id="highTempFrist"></p>
+                  <p class="low m-0" id="lowTempFrist"></p>
+                  <p class="weather-status" id="weatherStatusFrist"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card" id="thirdCard">
+              <div class="card-header text-center">
+                <span class="card-title" id="secondDay"></span>
+              </div>
+              <div class="card-body d-flex flex-column align-items-center">
+                <div class="weather-icon">
+                  <img
+                    src="images/night.png"
+                    alt=" Weather Icon"
+                    id="thirdIcon"
+                  />
+                </div>
+                <div class="wather-dgree d-flex flex-column align-items-center">
+                  <p class="high m-0" id="highTempSecond"></p>
+                  <p class="low m-0" id="lowTempSecond"></p>
+                  <p class="weather-status" id="weatherStatusSecond"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer bg-sec-dark p-5 px-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="position-relative">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Find your location..."
+              />
+              <button class="btn-search btn-sm">Subscribe</button>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-offset-1 mt-2">
+            <div class="social-links">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google-plus"></i></a>
+              <a href="#"><i class="fa fa-pinterest"></i></a>
+            </div>
+          </div>
+          <p class="copyright mt-4">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="bootstrap files/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
