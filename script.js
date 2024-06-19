@@ -32,6 +32,7 @@ async function getWeather() {
 getWeather();
 
 function getdate() {
+  daysOfWeek = [];
   for (var i = 0; i < currentData.forecast.forecastday.length; i++) {
     var date = new Date(currentData.forecast.forecastday[i].date)
       .toString()
@@ -44,7 +45,7 @@ function getdate() {
     .split(" ");
   cityDate = stringdate;
   //   console.log(cityDate[1] + " " + cityDate[2]);
-  //   console.log(daysOfWeek);
+  // console.log(daysOfWeek);
 }
 
 function showMainCard() {
@@ -63,7 +64,6 @@ function showMainCard() {
     currentData.current.wind_kph + "km/h";
   document.getElementById("windDir").innerHTML = currentData.current.wind_dir;
 }
-
 function showCards() {
   document.getElementById("fristDay").innerHTML = daysOfWeek[1];
   document.getElementById("secondDay").innerHTML = daysOfWeek[2];
