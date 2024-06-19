@@ -1,6 +1,3 @@
-var fristCard = document.getElementById("fristCard");
-var secondCard = document.getElementById("secondCard");
-var thirdCard = document.getElementById("thirdCard");
 var searchInput = document.getElementById("search");
 var currentData;
 var cityDate;
